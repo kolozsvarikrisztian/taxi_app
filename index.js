@@ -24,7 +24,7 @@ app.get('/cars', function (req, res) {
     const collection = client.db("taxi_app").collection("cars");
     // perform actions on the collection object
     // licenseNumber === 'ABC-123'
-    const cars = await collection.find({name: {$eq: ['Rover 45', 'SAAB 2000']}})
+    const cars = await collection.find()
     .toArray();    
     res.send(cars)
 
